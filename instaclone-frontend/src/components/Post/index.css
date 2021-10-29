@@ -1,0 +1,29 @@
+.card-img-top{
+    height: 400px;
+    background-repeat: space;
+}
+.red{
+    color: red;
+    
+}
+.white{
+    color: white;
+}
+
+#dropdown-basic-button{
+    width:10px;
+    height: 40px;
+    background:green;
+}
+.new-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.new-width{
+    width:800px;
+}
+.location-class{
+    color:#707070;
+    font-weight: 700;
+}
