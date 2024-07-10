@@ -38,12 +38,9 @@ function NewPost(){
     return(
         <div className="form-div">
             <form className="post-form" onSubmit={(e)=>createPost(e)} encType='multipart/form-data'>
-                {/* <label htmlFor="title" >Title</label> */}
                 <input value={title} type="text" placeholder="Title" onChange={e=>setTitle(e.target.value)} />
                 <input value={location} type="text" placeholder="Location" onChange={e=>setLocation(e.target.value)} /><br />
-                {/* <label htmlFor="body">Body</label> */}
                 <input value={body} type="text" placeholder="Body" onChange={e=>setBody(e.target.value)} /><br />
-                {/* <label htmlFor="image">ImageUrl</label> */}
                 <input filename="image" type="file" className="button" onChange={(e)=>onChangeFile(e)} /><br />
                 <Button type="submit" className="btn">Submit</Button>
             </form>

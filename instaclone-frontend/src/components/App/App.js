@@ -14,7 +14,7 @@ function App() {
         <Route exact path="/register" component={NewUser} />
         <PrivateRoute exact path="/posts" component={Posts} />
         <PrivateRoute exact path="/posts/new" component={NewPost} />
-        <Route exact path="/posts/edit/:post" component={EditPost} />
+        <PrivateRoute exact path="/posts/edit/:post" component={EditPost} />
       </Switch>
     </Router>
   );

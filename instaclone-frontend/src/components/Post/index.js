@@ -14,11 +14,9 @@ function Post(props){
   const likeIncrease=(props)=>{
     setClicked(true);
     setLikes(likes+1);
-    // console.log('likes onclick',likes);
   }
 
   async function putLike(){
-    //console.log('async like',props._id);
     await axios.put(`http://localhost:3070/posts/likes/${props._id}`,{likes:likes},{headers:{'Authorization': `Bearer ${getToken()}`}});
   }
 
@@ -34,12 +32,14 @@ function Post(props){
       if( await response.status === 200){
         alert("Successfully deleted");
       }
-      history.push('/posts');
+      // history.push('/posts');
+      window.location.reload();
     } catch(e){
-      alert(e);
+      alert(e.message);
     }
   
     // history.push('/posts');
+    
     //window.location.href('/posts');
   }
     return(
@@ -69,11 +69,8 @@ function Post(props){
           <div className="card-body p-0">
             <div className='new-row'>
               <div ><i className={clicked? 'fas fa-heart red': 'far fa-heart'} onClick={(e)=>likeIncrease(props)}></i></div>
-              {/* <i className="fab fa-telegram-plane icon-margin"></i> */}
               <div >{props.date}</div>
             </div>
-            {/* for like increase */}
-            {/* <p>{`${props.likes} likes`}</p> */}
             <p>{`${likes} likes`}</p>
             <h5 className="card-text mb-3">{props.body}</h5>
           </div>

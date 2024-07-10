@@ -31,12 +31,12 @@ function HomePage(){
             //const id = await data.id;
 
             setToken(data.token);
-            // window.location.href = "/posts";
+            window.location.href = "/posts";
         } catch(e) {
             console.log(e);
             alert("failed");
         }
-        window.location.href = "/posts";
+        // window.location.href = "/posts";
     }
 
     return(

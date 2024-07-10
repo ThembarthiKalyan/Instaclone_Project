@@ -9,7 +9,6 @@ app.use(bodyParser());
 const indexRoutes=require('./routes/app');
 const postRoutes=require("./routes/post");
 const jwt=require("jsonwebtoken");
-const e = require('express');
 app.use(bodyParser());
 mongoose.connect('mongodb://localhost/instaclone');
 //app.use(express.static(path.join(__dirname, "public")));
